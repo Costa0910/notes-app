@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "costa0910-notes-app",
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
