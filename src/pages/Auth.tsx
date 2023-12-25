@@ -9,12 +9,12 @@ const Auth = () => {
     email: "",
     password: "",
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (Login) {
       console.log("Login");
       console.log(formData);
-      signup(formData.email, formData.password);
+      await signup(formData.email, formData.password);
       setFormData({ email: "", password: "" });
     } else {
       console.log("Register");
