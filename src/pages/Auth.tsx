@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FieldType } from "../types/InputTypes";
+import { signup } from "../utils/auth";
 import "./auth.css";
 
 const Auth = () => {
@@ -13,6 +14,8 @@ const Auth = () => {
     if (Login) {
       console.log("Login");
       console.log(formData);
+      signup(formData.email, formData.password);
+      setFormData({ email: "", password: "" });
     } else {
       console.log("Register");
       console.log(formData);
